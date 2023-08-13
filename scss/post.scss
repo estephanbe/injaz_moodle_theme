@@ -1,0 +1,33 @@
+$theme-color: #01a0af;
+.primary-navigation {
+ li[data-key="home"], li[data-key="myhome"], li[data-key="mycourses"]{
+   display: none;
+ }
+}
+
+#inj-copyrights {
+  background-color: $theme-color;
+  color: #fff;
+  position: relative;
+}
+
+#page-wrapper {
+  //height: unset;
+  > nav {
+    background-color: $theme-color !important;
+    color: #fff !important;
+
+    > .primary-navigation > nav > ul > li > a {
+      color: #fff;
+
+      &:hover {
+        background-color: #097a83 !important;
+      }
+    }
+  }
+
+  //#page {
+  //  overflow-y: unset;
+  //  height: unset;
+  //}
+}
