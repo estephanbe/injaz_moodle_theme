@@ -6,7 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const url = document.querySelectorAll('li.activity.modtype_url .activitytitle .activityiconcontainer img');
     const hvp = document.querySelectorAll('li.activity.modtype_hvp .activitytitle .activityiconcontainer img');
     const challenge = document.querySelectorAll('li.activity.modtype_quiz .activitytitle .activityiconcontainer img');
-
+    console.log(url);
+    console.log(hvp);
+    console.log(challenge);
     url.forEach(function(element) {
         element.setAttribute('src', M.cfg.wwwroot + '/theme/htu_boshdev/pix/activities_icons/Learn.png');
         element.style.height = '100%';
