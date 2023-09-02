@@ -3,9 +3,9 @@
 console.log(5)
 // Equivalent JavaScript code
 document.addEventListener('DOMContentLoaded', function() {
-    const url = document.querySelectorAll('li.activity.modtype_url .activitytitle .activityiconcontainer img');
-    const hvp = document.querySelectorAll('li.activity.modtype_hvp .activitytitle .activityiconcontainer img');
-    const challenge = document.querySelectorAll('li.activity.modtype_quiz .activitytitle .activityiconcontainer img');
+    const url = document.querySelectorAll('.modtype_url .activitytitle .activityiconcontainer img');
+    const hvp = document.querySelectorAll('.modtype_hvp .activitytitle .activityiconcontainer img');
+    const challenge = document.querySelectorAll('.modtype_quiz .activitytitle .activityiconcontainer img');
 
     url.forEach(function(element) {
         element.setAttribute('src', M.cfg.wwwroot + '/theme/htu_boshdev/pix/activities_icons/Learn.png');
@@ -43,42 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
     //     });
     // })
     // console.log(editField)
-
-    const listItems = document.querySelectorAll('#multi_section_tiles > li');
-
-    listItems.forEach(function(item) {
-        item.addEventListener('click', function() {
-            const url = document.querySelectorAll('li.activity.modtype_url .activitytitle .activityiconcontainer img');
-            const hvp = document.querySelectorAll('li.activity.modtype_hvp .activitytitle .activityiconcontainer img');
-            const challenge = document.querySelectorAll('li.activity.modtype_quiz .activitytitle .activityiconcontainer img');
-            console.log(url)
-            console.log(hvp)
-            console.log(challenge)
-            url.forEach(function(element) {
-                element.setAttribute('src', M.cfg.wwwroot + '/theme/htu_boshdev/pix/activities_icons/Learn.png');
-                element.style.height = '100%';
-                element.style.width = '100%';
-                element.classList.add('nofilter');
-                element.parentNode.style.padding= '0';
-            });
-
-            hvp.forEach(function(element) {
-                element.setAttribute('src', M.cfg.wwwroot + '/theme/htu_boshdev/pix/activities_icons/Play.png');
-                element.style.height = '100%';
-                element.style.width = '100%';
-                element.classList.add('nofilter');
-                element.parentNode.style.padding= '0';
-            });
-
-            challenge.forEach(function(element) {
-                element.setAttribute('src', M.cfg.wwwroot + '/theme/htu_boshdev/pix/activities_icons/Challenge.png');
-                element.style.height = '100%';
-                element.style.width = '100%';
-                element.classList.add('nofilter');
-                element.parentNode.style.padding= '0';
-            });
-        });
-    });
 
 
 
