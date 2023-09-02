@@ -32,6 +32,7 @@ function theme_htu_boshdev_get_main_scss_content($theme) {
 	$pre = file_get_contents($CFG->dirroot . '/theme/htu_boshdev/scss/pre.scss');
 	// Post CSS - this is loaded AFTER the main scss but before the extra scss from the setting.
 	$post = file_get_contents($CFG->dirroot . '/theme/htu_boshdev/scss/post.scss');
+
 	// Combine them together.
 	return $pre . "\n" . $scss . "\n" . $post;
 }

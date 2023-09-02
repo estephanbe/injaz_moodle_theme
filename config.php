@@ -52,3 +52,5 @@ $THEME->haseditswitch = true;
 $THEME->scss = function($theme){
 	return theme_htu_boshdev_get_main_scss_content($theme);
 };
+
+$THEME->javascripts_footer = array('custom');
