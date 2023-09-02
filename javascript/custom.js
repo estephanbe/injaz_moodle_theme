@@ -1,8 +1,7 @@
 // Wait for the document to be ready
 
 console.log(5)
-// Equivalent JavaScript code
-document.addEventListener('DOMContentLoaded', function() {
+function applyChangesToIcons(){
     const url = document.querySelectorAll('.modtype_url .activitytitle .activityiconcontainer img');
     const hvp = document.querySelectorAll('.modtype_hvp .activitytitle .activityiconcontainer img');
     const challenge = document.querySelectorAll('.modtype_quiz .activitytitle .activityiconcontainer img');
@@ -30,29 +29,49 @@ document.addEventListener('DOMContentLoaded', function() {
         element.classList.add('nofilter');
         element.parentNode.style.padding= '0';
     });
+}
+
+applyChangesToIcons();
 
 
-    // Dev
-    // const editField = document.querySelectorAll(`[data-name="Age Group"]`);
-    // editField.forEach(element => {
-    //     element.addEventListener('click', function(e){
-    //         setTimeout(function(){
-    //             console.log(document.querySelectorAll('.modal'))
-    //             document.querySelector('.modal').style.display = 'block';
-    //         }, 3000)
-    //     });
-    // })
-    // console.log(editField)
+// Create a MutationObserver to watch for changes in the DOM
+const observer = new MutationObserver(function(mutationsList, observer) {
+    // Check each mutation in the list
+    for (const mutation of mutationsList) {
+        // Check if nodes were added to the DOM
+        if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+            // Check if any of the added nodes have the class .modtype_url
+            const addedUrlElements = document.querySelectorAll('.modtype_url');
+            const addedHvpElements = document.querySelectorAll('.modtype_hvp');
+            const addedQuizElements = document.querySelectorAll('.modtype_quiz');
 
+            if (addedUrlElements.length > 0) {
+                // If .modtype_url elements were added, apply your changes
+                applyChangesToIcons();
+            }
 
+            if (addedHvpElements.length > 0) {
+                // If .modtype_url elements were added, apply your changes
+                applyChangesToIcons();
+            }
 
+            if (addedQuizElements.length > 0) {
+                // If .modtype_url elements were added, apply your changes
+                applyChangesToIcons();
+            }
+        }
+    }
 });
 
+// Start observing the document for changes
+observer.observe(document.body, { childList: true, subtree: true });
 
 
 
 
-
+// document.addEventListener('DOMContentLoaded', function() {
+//
+// });
 
 
 
