@@ -6,6 +6,7 @@ function applyChangesToIcons(){
     const challenge = document.querySelectorAll('.modtype_quiz .activitytitle .activityiconcontainer img');
     const feedback = document.querySelectorAll('.modtype_feedback .activitytitle .activityiconcontainer img');
     const page = document.querySelectorAll('.modtype_page .activitytitle .activityiconcontainer img');
+    const certificate = document.querySelectorAll('.modtype_customcert .activitytitle .activityiconcontainer img');
 
     url.forEach(function(element) {
         element.setAttribute('src', M.cfg.wwwroot + '/theme/htu_boshdev/pix/activities_icons/Learn.png');
@@ -41,6 +42,14 @@ function applyChangesToIcons(){
 
     page.forEach(function(element) {
         element.setAttribute('src', M.cfg.wwwroot + '/theme/htu_boshdev/pix/activities_icons/PAGE.png');
+        element.style.height = '100%';
+        element.style.width = '100%';
+        element.classList.add('nofilter');
+        element.parentNode.style.padding= '0';
+    });
+
+    certificate.forEach(function(element) {
+        element.setAttribute('src', M.cfg.wwwroot + '/theme/htu_boshdev/pix/activities_icons/Certificate.png');
         element.style.height = '100%';
         element.style.width = '100%';
         element.classList.add('nofilter');
