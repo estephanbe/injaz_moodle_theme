@@ -1,10 +1,11 @@
 // Wait for the document to be ready
 
-console.log(5)
 function applyChangesToIcons(){
     const url = document.querySelectorAll('.modtype_url .activitytitle .activityiconcontainer img');
     const hvp = document.querySelectorAll('.modtype_hvp .activitytitle .activityiconcontainer img');
     const challenge = document.querySelectorAll('.modtype_quiz .activitytitle .activityiconcontainer img');
+    const feedback = document.querySelectorAll('.modtype_feedback .activitytitle .activityiconcontainer img');
+    const page = document.querySelectorAll('.modtype_page .activitytitle .activityiconcontainer img');
 
     url.forEach(function(element) {
         element.setAttribute('src', M.cfg.wwwroot + '/theme/htu_boshdev/pix/activities_icons/Learn.png');
@@ -24,6 +25,22 @@ function applyChangesToIcons(){
 
     challenge.forEach(function(element) {
         element.setAttribute('src', M.cfg.wwwroot + '/theme/htu_boshdev/pix/activities_icons/Challenge.png');
+        element.style.height = '100%';
+        element.style.width = '100%';
+        element.classList.add('nofilter');
+        element.parentNode.style.padding= '0';
+    });
+
+    feedback.forEach(function(element) {
+        element.setAttribute('src', M.cfg.wwwroot + '/theme/htu_boshdev/pix/activities_icons/FEEDBACK.png');
+        element.style.height = '100%';
+        element.style.width = '100%';
+        element.classList.add('nofilter');
+        element.parentNode.style.padding= '0';
+    });
+
+    page.forEach(function(element) {
+        element.setAttribute('src', M.cfg.wwwroot + '/theme/htu_boshdev/pix/activities_icons/PAGE.png');
         element.style.height = '100%';
         element.style.width = '100%';
         element.classList.add('nofilter');
